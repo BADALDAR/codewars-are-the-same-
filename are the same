@@ -1,0 +1,13 @@
+function comp(array1=[], array2=[])
+{
+let same= true;
+let newArray2 = [];
+  for (let i =0 ; i<array2.length; i++) {newArray2.push(array2[i]**0.5)}
+  array1.sort(function(a, b) {return a - b;})
+  newArray2.sort(function(a, b) {return a - b ;})
+
+for (let j =0 ; j<array1.length; j++) { 
+  if (array1[j]===newArray2[j]) {same=same&&same} else {same = same&&false}
+}
+  return same
+}
